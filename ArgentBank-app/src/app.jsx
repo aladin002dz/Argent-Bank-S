@@ -1,19 +1,10 @@
-//ArgentBank-app\src\app.jsx
+
+import { getUserProfile, setToken } from '@/redux/features/userSlice';
 import { useEffect } from 'react';
-
-
-import Router from './Router.jsx'
-// Importation des actions Redux
-import { setToken, getUserProfile } from './features/userSlice';
-// Importation du store Redux
 import { useDispatch } from 'react-redux';
+import Router from './Router.jsx';
 function App() {
-
-
-  // Création du dispatch
-
   const dispatch = useDispatch();
-
   useEffect(() => {
     const token = sessionStorage.getItem('token');
     if (token) {
@@ -24,9 +15,7 @@ function App() {
 
 
   return (
-
     <Router />
-
   );
 }
 

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { logoutUser } from '../../features/userSlice';
+import { useNavigate } from 'react-router-dom';
+import { logoutUser } from '../../redux/features/userSlice';
 const Logout = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();

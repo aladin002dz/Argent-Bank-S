@@ -1,8 +1,8 @@
 //ArgentBank-app\src\components\LogoutButton.jsx
 
-import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logoutUser } from "../features/userSlice";
+import { Link, useNavigate } from "react-router-dom";
+import { logoutUser } from "../redux/features/userSlice";
 
 
 const LogoutButton = () => {
