@@ -1,8 +1,8 @@
 // src/components/UserInfo.js
 
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchUserData } from '../features/userSlice'; // Corrigez le chemin vers userSlice
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserProfile } from '../redux/features/userApi'; // Updated import path and function
 
 function UserInfo() {
     const { data: user, loading, error } = useSelector((state) => state.user); // Accès à l'état utilisateur
@@ -10,7 +10,7 @@ function UserInfo() {
 
     // Récupération des données utilisateur au montage du composant
     useEffect(() => {
-        dispatch(fetchUserData()); 
+        dispatch(getUserProfile());
     }, [dispatch]);
 
     if (loading) {

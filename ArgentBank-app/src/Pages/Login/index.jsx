@@ -1,10 +1,11 @@
+import Footer from '@/components/footer';
+import Header from '@/components/header';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../../components/footer';
-import Header from '../../components/header';
-import { clearError, loginUser } from '../../redux/features/userSlice'; // Import de la fonction asynchrone
 
+import { loginUser } from '@/redux/features/userApi';
+import { clearError } from '@/redux/features/userSlice';
 
 function Login() {
     const [email, setEmail] = useState('');

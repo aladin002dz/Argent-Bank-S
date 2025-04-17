@@ -1,5 +1,5 @@
-
-import { getUserProfile, setToken } from '@/redux/features/userSlice';
+import { getUserProfile } from '@/redux/features/userApi';
+import { setToken } from '@/redux/features/userSlice';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Router from './Router.jsx';

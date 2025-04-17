@@ -5,7 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import Account from '../../components/account';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
-import { getUserProfile, setToken, updateUserProfile } from '../../redux/features/userSlice';
+import { getUserProfile, updateUserProfile } from '../../redux/features/userApi';
+import { setToken } from '../../redux/features/userSlice';
+
 function User() {
     const [FirstName, setFirstName] = useState('');
     const [LastName, setLastName] = useState('');
